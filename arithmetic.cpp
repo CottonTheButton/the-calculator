@@ -2,7 +2,8 @@
 
 int main(){
 
-    std::cout << "Addition, subtraction, multiplication, and division!" << std::endl;
+    double x{1.1};
+    std::cout << x;
 
     return 0;
 }
