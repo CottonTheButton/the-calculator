@@ -1,11 +1,26 @@
 import tkinter as tk
 
 root = tk.Tk()
+root.title("The Calculator")
+root.geometry("200x150")
 
-myLabel1 = tk.Label(root, text="Hello, world!")
-myLabel2 = tk.Label(root, text="Cotton!")
+input1 = tk.Entry(root)
+input2 = tk.Entry(root)
 
-myLabel1.grid(row=0, column=0)
-myLabel2.grid(row=1, column=5)
+input1.pack()
+input2.pack()
+
+def butt_add():
+    num1 = input1.get()
+    num2 = input2.get()
+    total = int(num1) + int(num2)
+    lab.config(text=f"answer = {total}")
+    
+
+butt = tk.Button(root, text="Calculate", command=butt_add)
+butt.pack()
+
+lab = tk.Label(text="")
+lab.pack()
 
 root.mainloop()
